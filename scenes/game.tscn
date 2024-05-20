@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://b7x6isvith2xu"]
 
-[ext_resource type="PackedScene" uid="uid://dblanb57l1o8x" path="res://scripts/player.tscn" id="1_wpls5"]
+[ext_resource type="PackedScene" uid="uid://dblanb57l1o8x" path="res://scenes/player.tscn" id="1_wpls5"]
 [ext_resource type="Texture2D" uid="uid://cj8q6ajtasuji" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="2_0tg22"]
 [ext_resource type="PackedScene" uid="uid://ypjs271v2s43" path="res://scenes/plat_form.tscn" id="3_7u685"]
 [ext_resource type="PackedScene" uid="uid://qyl1yohqlw13" path="res://scenes/coin.tscn" id="4_q76xq"]
