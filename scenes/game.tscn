@@ -470,7 +470,7 @@ offset_right = 705.0
 offset_bottom = -149.0
 theme_override_fonts/font = ExtResource("2_oxs4e")
 theme_override_font_sizes/font_size = 8
-text = "You collected X coins"
+text = "You collected X  coins"
 horizontal_alignment = 1
 autowrap_mode = 2
 
