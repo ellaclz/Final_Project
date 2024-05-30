@@ -420,6 +420,21 @@ sources/0 = SubResource("TileSetAtlasSource_5kk0e")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rpl6d"]
 
+[sub_resource type="Animation" id="Animation_051w3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(294, 31)]
+}
+
 [sub_resource type="Animation" id="Animation_v0ofp"]
 resource_name = "up"
 length = 1.5
@@ -437,7 +452,13 @@ tracks/0/keys = {
 "values": [Vector2(294, 31), Vector2(294, -111)]
 }
 
-[sub_resource type="Animation" id="Animation_051w3"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlwun"]
+_data = {
+"RESET": SubResource("Animation_051w3"),
+"up": SubResource("Animation_v0ofp")
+}
+
+[sub_resource type="Animation" id="Animation_bxbkl"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -449,13 +470,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(294, 31)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlwun"]
-_data = {
-"RESET": SubResource("Animation_051w3"),
-"up": SubResource("Animation_v0ofp")
+"values": [Vector2(767, -288)]
 }
 
 [sub_resource type="Animation" id="Animation_prsll"]
@@ -473,21 +488,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(767, -288), Vector2(612, -288)]
-}
-
-[sub_resource type="Animation" id="Animation_bxbkl"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(767, -288)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k6x5u"]
