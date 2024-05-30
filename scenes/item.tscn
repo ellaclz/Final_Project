@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlhagggts5kti"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_w8nqt"]
+[ext_resource type="Texture2D" uid="uid://dcyflr24s0dux" path="res://brackeys_platformer_assets/sprites/fruit.png" id="1_wga08"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5di00"]
+radius = 5.09902
+
+[node name="Item" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 2
+input_pickable = true
+script = ExtResource("1_w8nqt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wga08")
+region_enabled = true
+region_rect = Rect2(2, 34, 11, 13)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_5di00")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
