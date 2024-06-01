@@ -1,39 +1,95 @@
-[gd_scene load_steps=10 format=3 uid="uid://crogvjmeen6f7"]
+[gd_scene load_steps=18 format=3 uid="uid://crogvjmeen6f7"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_d03o2"]
-[ext_resource type="Texture2D" uid="uid://ceownu4f5cpuu" path="res://brackeys_platformer_assets/sprites/slime_purple.png" id="1_dlx00"]
+[ext_resource type="Texture2D" uid="uid://d0vjly2ng15dl" path="res://DinoSprites - mort.png" id="2_dmia6"]
 [ext_resource type="PackedScene" uid="uid://bk2ayoxdsfsii" path="res://scenes/killzone.tscn" id="2_ug6qy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bycel"]
-atlas = ExtResource("1_dlx00")
-region = Rect2(0, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2k8ab"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(0, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g1dsb"]
-atlas = ExtResource("1_dlx00")
-region = Rect2(24, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga684"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(24, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gqr46"]
-atlas = ExtResource("1_dlx00")
-region = Rect2(48, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fgoa"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(48, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tff5w"]
-atlas = ExtResource("1_dlx00")
-region = Rect2(72, 24, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_lka0t"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kge45"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t24jy"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeqaf"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mljc"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oy5p8"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pndxs"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh1nv"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3f6g6"]
+atlas = ExtResource("2_dmia6")
+region = Rect2(264, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q4seq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bycel")
+"texture": SubResource("AtlasTexture_2k8ab")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_g1dsb")
+"texture": SubResource("AtlasTexture_ga684")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gqr46")
+"texture": SubResource("AtlasTexture_2fgoa")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tff5w")
+"texture": SubResource("AtlasTexture_lka0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kge45")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t24jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeqaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mljc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oy5p8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pndxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh1nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3f6g6")
 }],
 "loop": true,
 "name": &"default",
@@ -41,28 +97,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8m20e"]
-size = Vector2(10, 14)
+size = Vector2(13, 16)
 
 [node name="Slime" type="Node2D"]
 script = ExtResource("1_d03o2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -9)
 sprite_frames = SubResource("SpriteFrames_q4seq")
 autoplay = "default"
-frame = 2
-frame_progress = 0.405553
+frame_progress = 0.833468
 
 [node name="Killzone" parent="." instance=ExtResource("2_ug6qy")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(0, -7)
+position = Vector2(1.5, -8)
 shape = SubResource("RectangleShape2D_8m20e")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
-target_position = Vector2(9, 0)
+target_position = Vector2(14, 0)
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
-target_position = Vector2(-10, 0)
+target_position = Vector2(-11, 0)
